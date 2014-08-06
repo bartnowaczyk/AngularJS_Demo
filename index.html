@@ -1,0 +1,68 @@
+<!doctype html>
+	<html lang="en" ng-app="example.com">
+<head>
+  <meta charset="utf-8">
+  <title>Example.com  </title>
+   <link rel="stylesheet" href="css/bootstrap-combined.min.css"> 
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/login.css"/>
+  <link rel="stylesheet" href="css/signup.css"/>
+  <link rel="stylesheet" href="css/font.css"/>
+</head>
+<body>
+
+<div class=all>
+	<div class=container>
+		<div class=login_form ng-controller="loginController">		
+			<div class=welcome>
+				<span class=welcome>Welcome to Example.com!</span><br>
+				<span class=signin>User Sign In</span>
+			</div>
+			<div class="alarmDiv" ng-show="Alert" ng-click="closeThis()"><span class="errorD">{{errorD}} </span> </div>
+
+			<div class=orish>		
+				<div class=hr></div> <div class=or><span class=orc>New user</span></div> <div class=hr></div> 
+			</div>
+			<div class=form >
+				<form ng-submit="submitLogin(userN)">
+					<input type=text ng-model="userN.email" class=long placeholder="Email"/ require-validate>
+					<input type=password ng-model="userN.password" class=long placeholder="password" name="password"/ require-validate>
+					<input type="checkbox" ng-model="userN.remember" id=remember class="checkbox"/>
+					<label for="remember"><span class=remember>Remember me</span></label>
+					<input class=submit type=submit value=Login>
+				</form>
+			</div> <!--end form -->
+		</div><!-- end login-form -->
+
+
+	</div> <!-- end container -->
+
+
+
+
+
+</div> <!-- end all -->
+
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="js/angular-file-upload-shim.js"></script> 
+  <script src="js/angular.1.2.6.js"></script>
+  <script src="js/angular-file-upload.js"></script> 
+  <script src="lib/angular-cookie-master/angular-cookie.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/loginController.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/angular-strap.min.js"></script>
+  <script src="lib/angular-slider/angular-slider.js"></script>
+  <script src="js/ng-switchery.js"></script>
+
+</body>
+</html>
